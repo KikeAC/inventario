@@ -38,12 +38,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'caracteristicas'); ?>
-		<?php echo $form->textField($model,'caracteristicas',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'caracteristicas'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'estadoFisico'); ?>
 		<?php echo $form->textField($model,'estadoFisico',array('size'=>8,'maxlength'=>8)); ?>
 		<?php echo $form->error($model,'estadoFisico'); ?>

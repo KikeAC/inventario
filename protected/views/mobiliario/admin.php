@@ -49,8 +49,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'descripcion',
 		'modelo',
 		'numSerie',
-		'caracteristicas',
 		'estadoFisico',
+                'usuarios_Id_Usuario',
 		/*
 		'marcas_id_Marca',
 		'usuarios_Id_Usuario',

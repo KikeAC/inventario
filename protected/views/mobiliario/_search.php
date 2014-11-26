@@ -32,11 +32,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'caracteristicas'); ?>
-		<?php echo $form->textField($model,'caracteristicas',array('size'=>60,'maxlength'=>256)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'estadoFisico'); ?>
 		<?php echo $form->textField($model,'estadoFisico',array('size'=>8,'maxlength'=>8)); ?>
 	</div>

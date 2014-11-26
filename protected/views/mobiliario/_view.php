@@ -21,10 +21,6 @@
 	<?php echo CHtml::encode($data->numSerie); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('caracteristicas')); ?>:</b>
-	<?php echo CHtml::encode($data->caracteristicas); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('estadoFisico')); ?>:</b>
 	<?php echo CHtml::encode($data->estadoFisico); ?>
 	<br />

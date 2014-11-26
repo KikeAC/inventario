@@ -8,7 +8,6 @@
  * @property string $descripcion
  * @property string $modelo
  * @property string $numSerie
- * @property string $caracteristicas
  * @property string $estadoFisico
  * @property integer $marcas_id_Marca
  * @property integer $usuarios_Id_Usuario
@@ -41,9 +40,9 @@ class Mobiliario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('descripcion, modelo, numSerie, caracteristicas, estadoFisico, marcas_id_Marca, usuarios_Id_Usuario, departamentos_id_depto, resguardos_id', 'required'),
+			array('descripcion, modelo, numSerie, estadoFisico, marcas_id_Marca, usuarios_Id_Usuario, departamentos_id_depto, resguardos_id', 'required'),
 			array('marcas_id_Marca, usuarios_Id_Usuario, departamentos_id_depto, resguardos_id', 'numerical', 'integerOnly'=>true),
-			array('descripcion, caracteristicas', 'length', 'max'=>256),
+			array('descripcion', 'length', 'max'=>256),
 			array('modelo', 'length', 'max'=>50),
 			array('numSerie', 'length', 'max'=>128),
 			array('estadoFisico', 'length', 'max'=>8),
@@ -51,7 +50,7 @@ class Mobiliario extends CActiveRecord
 			array('foto', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_Mob, descripcion, modelo, numSerie, caracteristicas, estadoFisico, marcas_id_Marca, usuarios_Id_Usuario, numInventario, departamentos_id_depto, resguardos_id, foto', 'safe', 'on'=>'search'),
+			array('id_Mob, descripcion, modelo, numSerie, estadoFisico, marcas_id_Marca, usuarios_Id_Usuario, numInventario, departamentos_id_depto, resguardos_id, foto', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -80,7 +79,6 @@ class Mobiliario extends CActiveRecord
 			'descripcion' => 'Descripcion',
 			'modelo' => 'Modelo',
 			'numSerie' => 'Num Serie',
-			'caracteristicas' => 'Caracteristicas',
 			'estadoFisico' => 'Estado Fisico',
 			'marcas_id_Marca' => 'Marcas Id Marca',
 			'usuarios_Id_Usuario' => 'Usuarios Id Usuario',
@@ -113,7 +111,6 @@ class Mobiliario extends CActiveRecord
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('modelo',$this->modelo,true);
 		$criteria->compare('numSerie',$this->numSerie,true);
-		$criteria->compare('caracteristicas',$this->caracteristicas,true);
 		$criteria->compare('estadoFisico',$this->estadoFisico,true);
 		$criteria->compare('marcas_id_Marca',$this->marcas_id_Marca);
 		$criteria->compare('usuarios_Id_Usuario',$this->usuarios_Id_Usuario);

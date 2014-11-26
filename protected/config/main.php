@@ -54,10 +54,10 @@ return array(
 			),
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=u252641_inventario',
+			'connectionString' => 'mysql:host=localhost;dbname=inventario',
 			'emulatePrepare' => true,
-			'username' => 'u252641_supergod',
-			'password' => 'Tuputamadr3',
+			'username' => 'root',
+			'password' => 'ubuntu32bits',
 			'charset' => 'utf8',
 		),
 		

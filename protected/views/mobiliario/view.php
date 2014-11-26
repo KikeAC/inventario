@@ -25,7 +25,6 @@ $this->menu=array(
 		'descripcion',
 		'modelo',
 		'numSerie',
-		'caracteristicas',
 		'estadoFisico',
 		'marcas_id_Marca',
 		'usuarios_Id_Usuario',
