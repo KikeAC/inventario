@@ -54,10 +54,13 @@ return array(
 			),
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=inventario',
+			'connectionString' => 'mysql:host=localhost;dbname=inventario', // Este es para el local
+			//'connectionString' => 'mysql:host=localhost;dbname=inventario', // Este es para el server
 			'emulatePrepare' => true,
 			'username' => 'root',
+			//'username' => 'root', // Server
 			'password' => 'ubuntu32bits',
+			//'password' => 'ubuntu32bits',  //Server
 			'charset' => 'utf8',
 		),
 		
