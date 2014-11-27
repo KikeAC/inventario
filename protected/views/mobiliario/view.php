@@ -27,7 +27,15 @@ $this->menu=array(
 		'numSerie',
 		'estadoFisico',
 		'marcas_id_Marca',
+                array(
+                    'label'=>'Marca',
+                    'value'=>$model->marcasIdMarca->Marca,
+                ),
 		'usuarios_Id_Usuario',
+                array(
+                    'label'=>'Usuario',
+                    'value'=>$model->usuariosIdUsuario->Nombre." ".$model->usuariosIdUsuario->apellido_pat
+                ),
 		'numInventario',
 		'departamentos_id_depto',
 		'resguardos_id',

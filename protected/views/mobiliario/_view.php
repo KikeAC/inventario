@@ -26,7 +26,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('marcas_id_Marca')); ?>:</b>
-	<?php echo CHtml::encode($data->marcas_id_Marca); ?>
+	<?php echo CHtml::encode($data->marcasIdMarca->Marcas); ?>
 	<br />
 
 	<?php /*

@@ -14,6 +14,8 @@ $this->menu=array(
 
 <h1>Mobiliarios</h1>
 
+<p>Este es una prueba de la vista</p>
+
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',

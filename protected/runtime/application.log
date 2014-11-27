@@ -11580,3 +11580,97 @@ Stack trace:
 REQUEST_URI=/inventario/index.php/mobiliario/admin
 HTTP_REFERER=http://localhost/inventario/index.php/mobiliario/index?view=index
 ---
+2014/11/26 14:40:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'inventario.resguardo' doesn't exist. La sentencia SQL ejecutada fue: SHOW FULL COLUMNS FROM `resguardo`.
+in C:\xampp\htdocs\inventario\protected\views\resguardo\index.php (20)
+in C:\xampp\htdocs\inventario\protected\controllers\ResguardoController.php (128)
+in C:\xampp\htdocs\inventario\index.php (13)
+2014/11/26 14:40:17 [error] [exception.CDbException] exception 'CDbException' with message 'La tabla "resguardo" definida en la clase active record "Resguardo" no se ha podido encontrar en la base de datos.' in C:\xampp\htdocs\yiir\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\yiir\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Resguardo))
+#1 C:\xampp\htdocs\yiir\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\yiir\db\ar\CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\yiir\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yiir\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\yiir\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\yiir\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\yiir\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#8 C:\xampp\htdocs\yiir\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 C:\xampp\htdocs\yiir\web\CBaseController.php(147): CListView->init()
+#10 C:\xampp\htdocs\yiir\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\inventario\protected\views\resguardo\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 C:\xampp\htdocs\yiir\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\yiir\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yiir\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yiir\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 C:\xampp\htdocs\inventario\protected\controllers\ResguardoController.php(128): CController->render('index', Array)
+#17 C:\xampp\htdocs\yiir\web\actions\CInlineAction.php(49): ResguardoController->actionIndex()
+#18 C:\xampp\htdocs\yiir\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\yiir\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\htdocs\yiir\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\htdocs\yiir\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yiir\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\htdocs\yiir\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yiir\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\htdocs\yiir\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\htdocs\yiir\web\CWebApplication.php(282): CController->run('index')
+#27 C:\xampp\htdocs\yiir\web\CWebApplication.php(141): CWebApplication->runController('resguardo/index')
+#28 C:\xampp\htdocs\yiir\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\inventario\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/inventario/index.php/resguardo/index?view=index
+HTTP_REFERER=http://localhost/inventario/index.php/mobiliario/index?view=index
+---
+2014/11/26 20:38:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yiir\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yiir\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yiir\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiir\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiir\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiir\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiir\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiir\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiir\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yiir\web\CWebApplication.php(141): CWebApplication->runController('mobiliario/crea...')
+#9 C:\xampp\htdocs\yiir\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\inventario\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/inventario/index.php/mobiliario/create
+HTTP_REFERER=http://localhost/inventario/index.php/mobiliario/index?view=index
+---
+2014/11/26 20:45:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yiir\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yiir\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yiir\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiir\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiir\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiir\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiir\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiir\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiir\web\CWebApplication.php(282): CController->run('index')
+#8 C:\xampp\htdocs\yiir\web\CWebApplication.php(141): CWebApplication->runController('mobiliario/inde...')
+#9 C:\xampp\htdocs\yiir\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\inventario\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/inventario/index.php/mobiliario/index?view=index
+HTTP_REFERER=http://localhost/inventario/index.php
+---
+2014/11/26 21:07:03 [error] [exception.CException] exception 'CException' with message 'La propiedad "Usuarios"."Id_Usuario" no se encuentra definida.' in C:\xampp\htdocs\yiir\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiir\db\ar\CActiveRecord.php(145): CComponent->__get('Id_Usuario')
+#1 C:\xampp\htdocs\inventario\protected\views\hola\index.php(5): CActiveRecord->__get('Id_Usuario')
+#2 C:\xampp\htdocs\yiir\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yiir\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiir\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiir\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\inventario\protected\controllers\HolaController.php(9): CController->render('index', Array)
+#7 C:\xampp\htdocs\yiir\web\actions\CInlineAction.php(49): HolaController->actionIndex()
+#8 C:\xampp\htdocs\yiir\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yiir\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yiir\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yiir\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\htdocs\yiir\web\CWebApplication.php(141): CWebApplication->runController('hola')
+#13 C:\xampp\htdocs\yiir\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\inventario\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/inventario/index.php/hola
+---
